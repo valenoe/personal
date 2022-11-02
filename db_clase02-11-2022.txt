@@ -1,0 +1,16 @@
+CREATE TABLE Ejemplo(nombre varchar(50) not null, fechaNaciemiento date);
+
+insert into Ejemplo values('Benjamin', to_date('01/11/2022', 'MM/DD/YYYY'));
+insert into Ejemplo values('Valery', to_date('01/11/2022', 'MM/DD/YYYY'));
+insert into Ejemplo values('Daniel', to_date('01/11/2022', 'DD/MM/YYYY'));
+insert into Ejemplo values('Daniel', to_date('01/11/2022', 'MM/DD/YYYY'));
+
+insert into Ejemplo values('Sebastian', to_date('05/01/2022', 'DD/MM/YYYY'));
+
+insert into Ejemplo values('Valery', '-');
+select * from Ejemplo order by fechaNaciemiento;
+
+SELECT DISTINCT nombre FROM Ejemplo;
+
+SELECT * FROM Ejemplo WHERE fechaNaciemiento >= TO_DATE('01/11/2022', 'DD/MM/YYYY') and 
+fechaNaciemiento <= TO_DATE('30/11/2022', 'DD/MM/YYYY');
